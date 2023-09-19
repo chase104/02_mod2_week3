@@ -2,7 +2,7 @@ import { primaryContext } from '../../context/PrimaryContext'
 import './index.css'
 import React, { useContext } from 'react'
 
-const Card = ({productData}) => {
+const Card = ({productData, howMany}) => {
 
   const { cart, setCart } = useContext(primaryContext)
 
@@ -25,19 +25,18 @@ const Card = ({productData}) => {
   // not in cart!
   if (indexInCart === -1) {
       newCart.push(
-        { productId: productData.id, number: 1 }
+        { productId: productData.id, howMany: 1 }
         
         );
   } else {
-      newCart[indexInCart].number++;
+      newCart[indexInCart].howMany++;
   }
-  
   setCart(newCart);
-
-
   }
   return (
     <div className="card">
+        {howMany === undefined ? <></> : <button>Remove from cart</button>}
+        {howMany === undefined ? <></> : <span>{howMany}</span>}
         <button onClick={handleClick}>Add To Cart</button>
         <h3>{productData.title}</h3>
         <img src={productData.image} alt={productData.title} />

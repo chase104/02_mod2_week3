@@ -1,3 +1,4 @@
+import Cart from '../Cart';
 import Menu from '../Menu';
 import ProductList from '../ProductList';
 import './index.css';
@@ -9,6 +10,7 @@ const Dashboard = () => {
         <h1>Dashboard - select some products!</h1>
         <Menu />
         <ProductList />
+        <Cart />
     </div>
   )
 }
