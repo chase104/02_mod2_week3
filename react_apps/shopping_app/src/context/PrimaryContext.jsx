@@ -9,13 +9,19 @@ export const primaryContext = createContext();
 
 const PrimaryProvider = (props) => {
     const [products, setProducts] = useState([]);
-
-    console.log(products);
+    const [cart, setCart] = useState([]);
+    console.log({cart});
+    // let exampleObject = {
+    //     product: {},
+    //     number: 3
+    // }
 
     return (
         <primaryContext.Provider value={{
             products,
-            setProducts
+            setProducts,
+            cart, 
+            setCart
         }}>
                 {props.children}
         </primaryContext.Provider>

@@ -13,7 +13,7 @@
     overflow: hidden;
 }
 
-.card div {
+.card > div {
     max-height: 160px;
     overflow: scroll;
 }

@@ -5,7 +5,7 @@ import Card from "../Card";
 const ProductList = () => {
     // WE NEED THAT PRODUCT ARRAY HERE!
 
-    const { products } = useContext(primaryContext);
+const { products } = useContext(primaryContext);
   return (
     <div className="product-list">
         {
