@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { primaryContext } from '../../context/PrimaryContext'
-import Card from '../Card';
+import Card from '../../components/Card';
 
 const Cart = () => {
 

@@ -1,6 +1,6 @@
-import Cart from '../Cart';
+import Cart from '../../pages/Cart';
 import Menu from '../Menu';
-import ProductList from '../ProductList';
+import ProductList from '../../pages/ProductList';
 import './index.css';
 
 

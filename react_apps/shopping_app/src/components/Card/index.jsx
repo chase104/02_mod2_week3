@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { primaryContext } from '../../context/PrimaryContext'
 import './index.css'
 import React, { useContext } from 'react'
@@ -38,9 +39,11 @@ const Card = ({productData, howMany}) => {
         {howMany === undefined ? <></> : <button>Remove from cart</button>}
         {howMany === undefined ? <></> : <span>{howMany}</span>}
         <button onClick={handleClick}>Add To Cart</button>
-        <h3>{productData.title}</h3>
-        <img src={productData.image} alt={productData.title} />
-        <div>{productData.description}</div>
+        <Link to={`/single_product/?clickedProductId=${productData.id}`}     >
+          <h3>{productData.title}</h3>
+          <img src={productData.image} alt={productData.title} />
+          <div className="description">{productData.description}</div>
+        </Link>
     </div>
   )
 }
